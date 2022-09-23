@@ -1,0 +1,36 @@
+Q-1 What is software?
+	software is a set of instructions, data, 0
+Q-2 Types of  application
+  	Application can be categorized into the followings types.
+	1)web browsers
+	2)presentation software
+	3)spreadsheet software
+	4)graphic software
+	5)word processors
+	6)database software
+	7)multimedia software
+	8)education software
+	9)information software
+	10)content access software
+Q-3What is mobile application?
+  	A mobile application ,most commonly known as an app,is a kind of  application software 
+	interded  to run on a mobile phone ,for example,a  smartphone or tablet pc.
+
+Q-4Difference between moblie application and web application
+->moblie apps are designed for ude on smartphones ,tablets,and other smaller touch devices.
+->web applications run in a web browser and can be made "moblie-friendly"to shrink down to the size 
+    of the screen   you're viewing.
+
+->users of mobile apps typically recive morelimited functionalitythan a full-blown website and many of these apps
+  focus on a single purpose.
+
+->games and other self-contained programs may be bettersuited for a mobile app.
+->web apps can help younreach a more extensive audience since they're usable by anyone with
+ acess to a web browser.
+
+->it's possible to communicate with mobile apps even when the internet is down.
+->it's not possible to communicate with web apps when internet is down. 
+
+Q-5 Who devloped android?
+	android  inc was founded in palo alto,california,rich miner,nick sears,chris white,and 
+	andy rubin were its four founders.

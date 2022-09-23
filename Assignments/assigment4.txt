@@ -1,0 +1,13 @@
+//kotlin program to multiply two floating point numbers and program to find  ASCIT value of a character
+
+fun main()
+{
+    var num1:Float =1f
+    var num2:Float=3f
+
+    println("Multiplication of $num1 and $num2 is:${num1 * num2}")
+
+    var char:Char = 'b'
+
+    println("The ASCIT value of '$char' is: ${char.code}")
+}

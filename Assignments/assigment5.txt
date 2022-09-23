@@ -1,0 +1,13 @@
+//kotiln program to comute quotient and reaminder
+
+fun main()
+{
+    var dividend:Int =25
+    var divisor:Int = 3
+
+    var quotient:Int =dividend / divisor
+    var remainder:Int=dividend % divisor
+
+    println("Quotient: $quotient")
+    println("Remainder: $remainder")
+}

@@ -1,0 +1,15 @@
+//kotlin program to check whether a number is even or odd
+
+fun main()
+{
+    var num:Int = 3
+
+    if(num % 2 ==0)
+    {
+        println("The number $num is even")
+    }
+    else
+    {
+        println("The number $num is odd")
+    }
+}

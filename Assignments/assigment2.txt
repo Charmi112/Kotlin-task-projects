@@ -1,0 +1,12 @@
+//kotlin program to print an integer (entered by the user)
+import java.util.Scanner
+
+fun main()
+{
+    var sc= Scanner(System.`in`)
+
+    println("Enter number: ")
+    var num:Int = sc.nextInt()
+
+    println("number is: $num")
+}
