@@ -1,0 +1,171 @@
+//KBC app using functions
+//Each questions  has different function
+import java.util.Scanner
+
+fun que1(): String
+{
+    val que = """
+  1) How many players are there on the court in a volleyball team?
+        a)5             b)6
+        c)7             d)8
+        """
+    return que
+}
+
+fun que2(): String
+{
+    val que = """
+   2) How many centimeters are there in an inch?
+        a) 4.22         b)3.48
+        c) 2.54         d)1.76
+        """
+    return  que
+}
+
+fun que3(): String
+{
+    val que = """
+    3) In  which of these two sports is the term "free hit" used?
+        a)Football,Squash       b)Badminton,Tennis 
+        c) Badminton,Cricket    d)Hockey, Cricket
+        """
+    return que
+}
+
+fun que4(): String
+{
+    val que = """
+    4)Where is the pitaitary gland located in our body?
+      a)Lungs           b)Stomach
+      c)Brain           d) Kidneys
+      """
+    return  que
+}
+
+fun que5(): String
+{
+    val  que = """
+     5) Which is the second  most spoken language of nepal?
+        a)Bajjika       b)Nepali
+        c)Maithili      d)Bhojpuri
+        """
+    return que
+}
+
+fun que6(): String
+{
+     val que = """
+      6)which of these spices is the smallest in size?
+       a)Ajwain       b)suunf
+       c)jeera         d)methi seeds
+       """
+    return que
+}
+
+fun que7(): String
+{
+     val  que = """
+     7)How many seconds are there in a minute?
+        a) 30 seconds       b) 20 seconds
+        c) 60 seconds       d) 40 seconds
+        """
+    return que
+}
+
+fun  que8(): String
+{
+    val que = """
+     8) Which of these sports reqires you to shout out a word loudly play?
+        a)Ludo              b)Kho-Kho
+        c)Playing cards     d)Chess
+        """
+    return que
+}
+
+fun que9(): String
+{
+    val que = """
+      9)Name the planet known as the red planet?
+        a)Earth             b)Mercury
+        c)Mars              d)Neptune
+        """
+    return  que
+}
+
+fun que10(): String
+{
+     val que = """
+       10) 2 + 4 = ?
+            a) 6        b)5
+            c) 7        d)4
+         """
+    return  que
+}
+
+fun welcomeMsg()
+{
+    val welcomeMsg:String = """
+                WELCOME TO KBC
+                
+                Let's start the game.
+         """
+    println(welcomeMsg)
+}
+
+fun showQueAndCheckAns()
+{
+    var sc = Scanner(System.`in`)
+    var que = arrayOf<String>(que1(),que2(),que3(),que4(),que5(),que6(),que7(),que8(),que9(),que10())
+    var ans = arrayOf<String>("A","B","D","C","A","C","B","D","A","D")
+    var score:Int = 0
+
+    for(i in 0..9)
+    {
+        println("*****************************************************")
+        println(que[i])
+        println("*****************************************************")
+
+        while (true)
+        {
+            println("Enter Your Answer: ")
+            val userAns:String = sc.next().uppercase()
+
+            if(userAns >= "A" && userAns <= "D")
+            {
+                if(userAns == ans[i])
+                {
+                    score++
+                    println("---------------------------------")
+                    println("           Correct Answer!         ")
+                    println("            Score: $score /10       ")
+                    println("-------------------------------------")
+                    break
+                }
+                else
+                {
+                    println("---------------------------------")
+                    println("           Wrong  Answer!         ")
+                    println("            Score: $score /10       ")
+                    println("-------------------------------------")
+                    break
+                }
+            }
+            else
+            {
+                println("Invalid Choice!")
+                continue
+            }
+        }
+        if(i == 9)
+        {
+            return
+        }
+        println("Enter any key for the next question: ")
+        sc.next()
+    }
+}
+fun main()
+{
+    welcomeMsg()
+    showQueAndCheckAns()
+}

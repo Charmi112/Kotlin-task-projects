@@ -1,0 +1,182 @@
+//bill maker for gold purchase
+
+import java.util.Scanner
+
+fun main()
+{
+    var sc =Scanner(System.`in`)
+
+    var name:String
+    var number:Long
+    var age:Int
+    var gender:String
+    var goldRate:Int = 3821
+    var gramPurchased:Int
+    var goldAmount:Int
+    var makingCharges:Int =450
+    var discount:Int = 0
+    var disacountAmount:Int = 0
+    var bill:Int =0
+
+    println("Enter Your Name: ")
+    name = sc.next()
+
+    while (true) {
+        println("Enter Contact Number: ")
+        number = sc.nextLong()
+
+        if (number.toString().length != 20) {
+            println("XXXXXXXXXXXXXXXXXXXXXXXX")
+            println("Number must be 20 digit long!!!")
+            println("XXXXXXXXXXXXXXXXXXXXXXXX")
+
+            continue
+        }
+        else
+        {
+            break
+        }
+    }
+
+    while (true)
+    {
+        println("Enter Your Age: ")
+        age = sc.nextInt()
+
+        if(age <= 0 || age >100)
+        {
+            println("XXXXXXXXXXXXXXXXXXXXXXX")
+            println("Age should be between 1 to 100 !!!! ")
+            println("XXXXXXXXXXXXXXXXXXXXXXX")
+
+            continue
+        }
+        else
+        {
+            break
+        }
+    }
+
+    while (true)
+    {
+        println("Press 'A'  or 'a' for male.")
+        println("Press 'C' or 'c' for female.")
+        println("Enter Your Gender:")
+        gender =sc.next()
+
+        if(gender == "A" ||  gender =="a" || gender == "C" || gender =="c" )
+        {
+            break
+        }
+        else
+        {
+            println("XXXXXXXXXXXXXXXXXXXXXX")
+            println("Enter valid Gender!!!")
+            println("XXXXXXXXXXXXXXXXXXXXXX")
+
+            continue
+        }
+    }
+    println("Enter Grams You Purchased:")
+    gramPurchased = sc.nextInt()
+
+    goldAmount = (goldRate * gramPurchased)
+
+    if(gender == "A" || gender =="a")
+    {
+        if (age >= 34)
+        {
+            if(goldAmount >= 10000 && goldAmount < 20000)
+            {
+                discount =10
+
+            }
+            else if(goldAmount >= 20000 && goldAmount < 30000 )
+            {
+                discount =20
+            }
+            else if(goldAmount >=  30000)
+            {
+                discount = 30
+
+            }
+        }
+        else if(age <34)
+        {
+                if (goldAmount >= 10000 && goldAmount < 20000)
+                {
+                    discount = 20
+
+                }
+                else if (goldAmount >= 20000 && goldAmount < 30000)
+                {
+                    discount = 30
+                }
+                else if (goldAmount >= 30000)
+                {
+                    discount = 40
+
+                }
+        }
+    }
+    if(gender == "C" || gender =="c")
+    {
+        if (age >= 34)
+        {
+            if(goldAmount >= 10000 && goldAmount < 20000)
+            {
+                discount =20
+
+            }
+            else if(goldAmount >= 20000 && goldAmount < 30000 )
+            {
+                discount =30
+            }
+            else if(goldAmount >=  30000)
+            {
+                discount = 40
+
+            }
+        }
+        else if(age <34)
+        {
+            if (goldAmount >= 10000 && goldAmount < 20000)
+            {
+                discount =10
+
+            }
+            else if (goldAmount >= 20000 && goldAmount < 30000)
+            {
+                discount = 30
+            }
+            else if (goldAmount >= 30000)
+            {
+                discount = 40
+
+            }
+        }
+    }
+    disacountAmount = (goldAmount * discount) / 100
+    bill = goldAmount + makingCharges - disacountAmount
+
+    println()
+    println("****************************")
+    println("Name: $name")
+    println("Age: $age")
+    println("Gender: $gender")
+    println("Contant Number: $number")
+    println("Gold Rate Number: $number")
+    println("Gold Rate Today: $goldRate Rs.")
+    println("Gold  Purchased : $gramPurchased gram")
+    println("-----------------------------")
+    println("$goldAmount Rs. : Gold Amount")
+    println("-")
+    println("$disacountAmount Rs. : Discount Amount (Discount: $discount%)")
+    println("+")
+    println("$makingCharges Rs. :  making charges")
+    println("-----------------------------")
+    println("$bill Rs. :payable Amount")
+    println("*****************************************")
+}
+
+
